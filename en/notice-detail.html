@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIRYONG TECH - Notice Detail</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">KIRYONG TECH</a></div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="company-info.html">
+                        About
+                        <span class="dropdown-arrow"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="company-info.html">Company Info</a></li>
+                        <li><a href="ceo-message.html">CEO Message</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="notice.html" class="active">Notice</a></li>
+            </ul>
+            <a href="../notice-detail.html" class="lang-switch">
+                <svg class="flag-icon" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="60" height="40" fill="#fff"/>
+                    <circle cx="30" cy="20" r="10" fill="#C60C30"/>
+                    <path d="M30 10 A10 10 0 0 1 30 30 A5 5 0 0 1 30 20 A5 5 0 0 0 30 10" fill="#003478"/>
+                    <g fill="#000">
+                        <rect x="8" y="6" width="2" height="10" transform="rotate(-56 9 11)"/>
+                        <rect x="11" y="4" width="2" height="10" transform="rotate(-56 12 9)"/>
+                        <rect x="14" y="2" width="2" height="10" transform="rotate(-56 15 7)"/>
+                        <rect x="44" y="28" width="2" height="10" transform="rotate(-56 45 33)"/>
+                        <rect x="47" y="26" width="2" height="10" transform="rotate(-56 48 31)"/>
+                        <rect x="50" y="24" width="2" height="10" transform="rotate(-56 51 29)"/>
+                        <rect x="44" y="2" width="2" height="10" transform="rotate(56 45 7)"/>
+                        <rect x="47" y="4" width="2" height="10" transform="rotate(56 48 9)"/>
+                        <rect x="50" y="6" width="2" height="10" transform="rotate(56 51 11)"/>
+                        <rect x="8" y="24" width="2" height="10" transform="rotate(56 9 29)"/>
+                        <rect x="11" y="26" width="2" height="10" transform="rotate(56 12 31)"/>
+                        <rect x="14" y="28" width="2" height="10" transform="rotate(56 15 33)"/>
+                    </g>
+                </svg>
+                KR
+            </a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-content">
+            <span class="header-label">NOTICE</span>
+            <h1>Notice</h1>
+            <p>Latest news from KIRYONG TECH</p>
+        </div>
+    </section>
+
+    <!-- Notice Detail -->
+    <section class="notice-detail">
+        <div class="container">
+            <div class="detail-container" data-aos="fade-up">
+                <!-- Detail Header -->
+                <div class="detail-header">
+                    <div class="detail-title-wrap">
+                        <span class="detail-badge" id="noticeBadge"></span>
+                        <h2 class="detail-title" id="noticeTitle"></h2>
+                    </div>
+                    <div class="detail-meta">
+                        <span class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span id="noticeDate"></span>
+                        </span>
+                        <span class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            Views <span id="noticeViews"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Detail Content -->
+                <div class="detail-content" id="noticeContent">
+                    <!-- Content will be displayed dynamically -->
+                </div>
+
+                <!-- Detail Navigation -->
+                <div class="detail-nav">
+                    <a href="#" class="detail-nav-item prev" id="prevNotice">
+                        <span class="nav-label">Previous</span>
+                        <span class="nav-title" id="prevTitle"></span>
+                    </a>
+                    <a href="#" class="detail-nav-item next" id="nextNotice">
+                        <span class="nav-label">Next</span>
+                        <span class="nav-title" id="nextTitle"></span>
+                    </a>
+                </div>
+
+                <!-- Back to List Button -->
+                <div class="detail-actions">
+                    <a href="notice.html" class="btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        Back to List
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KIRYONG TECH</h3>
+                    <p>Automotive Stamping Tools Manufacturer</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="company-info.html">About</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="notice.html">Notice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>TEL: +82-53-583-3244</p>
+                    <p>FAX: +82-53-583-3243</p>
+                    <p>EMAIL: warni12@naver.com</p>
+                    <p>112, Hosandong-ro, Dalseo-gu, Daegu, Korea</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KIRYONG TECH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Notice data (English)
+        const notices = {
+            '1': {
+                badge: '',
+                title: 'Website Renewal Open',
+                date: '2024.12.15',
+                views: '512',
+                content: `
+                    <p>Hello, this is KIRYONG TECH.</p>
+
+                    <p>We have completely renewed our website to provide better service to our customers.</p>
+
+                    <div class="content-box">
+                        <h3>Major Improvements</h3>
+                        <ul>
+                            <li><strong>Responsive Design</strong> - Optimized display for all devices including PC, tablet, and mobile</li>
+                            <li><strong>Company Information Update</strong> - Updated history and equipment status</li>
+                            <li><strong>Improved User Experience</strong> - Intuitive menu structure and fast page loading</li>
+                            <li><strong>Notice System</strong> - Real-time company news and announcements</li>
+                        </ul>
+                    </div>
+
+                    <p>KIRYONG TECH will continue to do our best to be a successful business partner for our customers.</p>
+
+                    <p class="signature">Thank you.<br>KIRYONG TECH Team</p>
+                `
+            },
+            '2': {
+                badge: '',
+                title: 'Company Name Change Notice',
+                date: '2002.02.10',
+                views: '356',
+                content: `
+                    <p>Hello, this is Kiryong Precision Metal.</p>
+
+                    <p>We would like to inform you that our company name has been changed as of February 2002.</p>
+
+                    <div class="content-box">
+                        <h3>Changes</h3>
+                        <ul>
+                            <li><strong>Before:</strong> Kiryong Precision Metal</li>
+                            <li><strong>After:</strong> Kiryong Precision</li>
+                            <li><strong>Effective Date:</strong> February 10, 2002</li>
+                        </ul>
+                    </div>
+
+                    <p>The business registration number, address, and contact information remain unchanged.
+                    All contract relationships and transaction conditions will also remain the same.</p>
+
+                    <p>Please note that tax invoices and other documents will be issued under the new company name.</p>
+
+                    <p>We ask for your continued interest and support, and we will repay you with the highest quality.</p>
+
+                    <p class="signature">Thank you.<br>Kiryong Precision Team</p>
+                `
+            },
+            '3': {
+                badge: '',
+                title: 'ISO 9001:2008 Quality Management System Certification',
+                date: '2009.06.20',
+                views: '421',
+                content: `
+                    <p>Hello, this is Kiryong Precision.</p>
+
+                    <p>We are pleased to announce that we have acquired the ISO 9001:2008 international quality management system certification in June 2009.</p>
+
+                    <div class="content-box">
+                        <h3>Certification Overview</h3>
+                        <ul>
+                            <li><strong>Certification:</strong> ISO 9001:2008</li>
+                            <li><strong>Scope:</strong> Automotive press die manufacturing</li>
+                            <li><strong>Date:</strong> June 2009</li>
+                            <li><strong>Certifying Body:</strong> German Cert</li>
+                        </ul>
+                    </div>
+
+                    <p>ISO 9001 is an international standard for quality management systems, demonstrating that we have
+                    established a quality assurance system through customer satisfaction and continuous improvement.</p>
+
+                    <div class="content-box">
+                        <h3>Future Plans</h3>
+                        <ul>
+                            <li>Systematic quality management system operation</li>
+                            <li>Continuous process improvement activities</li>
+                            <li>Enhanced efforts to improve customer satisfaction</li>
+                            <li>Regular internal audits and training</li>
+                        </ul>
+                    </div>
+
+                    <p>Through this ISO certification, we will achieve more systematic and stable quality management
+                    to provide the best products and services to our customers.</p>
+
+                    <p class="signature">Thank you.<br>Kiryong Precision Team</p>
+                `
+            },
+            '4': {
+                badge: '',
+                title: 'Factory Expansion & Relocation Notice',
+                date: '2017.03.15',
+                views: '389',
+                content: `
+                    <p>Hello, this is Kiryong Precision.</p>
+
+                    <p>We would like to inform you that we have relocated to a new factory in March 2017 due to business expansion.</p>
+
+                    <div class="content-box">
+                        <h3>Relocation Information</h3>
+                        <ul>
+                            <li><strong>Previous Address:</strong> Wolam-dong, Dalseo-gu, Daegu</li>
+                            <li><strong>New Address:</strong> 112, Hosandong-ro, Dalseo-gu, Daegu, Korea</li>
+                            <li><strong>Relocation Date:</strong> March 15, 2017</li>
+                            <li><strong>Normal Operations:</strong> From March 20, 2017</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-box">
+                        <h3>Contact Information</h3>
+                        <ul>
+                            <li><strong>Phone:</strong> +82-53-583-3244 (unchanged)</li>
+                            <li><strong>Fax:</strong> +82-53-583-3243 (unchanged)</li>
+                            <li><strong>Email:</strong> warni12@naver.com (unchanged)</li>
+                        </ul>
+                    </div>
+
+                    <p>The new factory has been expanded to approximately twice the size of the previous facility,
+                    equipped with state-of-the-art equipment to further improve production capacity and quality.</p>
+
+                    <p>There may be some temporary operational gaps during the relocation period,
+                    but we will do our best to minimize any inconvenience. We appreciate your understanding.</p>
+
+                    <p>We ask for your continued interest and support, and we will continue to grow as KIRYONG TECH.</p>
+
+                    <p class="signature">Thank you.<br>Kiryong Precision Team</p>
+                `
+            },
+            '5': {
+                badge: 'IMP',
+                title: '2024 Lunar New Year Holiday Notice',
+                date: '2024.01.20',
+                views: '152',
+                content: `
+                    <p>Hello, this is KIRYONG TECH.</p>
+
+                    <p>We would like to inform you of our holiday schedule for the 2024 Lunar New Year.</p>
+
+                    <div class="content-box">
+                        <h3>Holiday Period</h3>
+                        <ul>
+                            <li><strong>February 9 (Fri) ~ February 12 (Mon), 2024</strong></li>
+                            <li>Closed for 4 days</li>
+                            <li>Normal operations resume from February 13 (Tue), 2024</li>
+                        </ul>
+                    </div>
+
+                    <p>We hope all our customers have a peaceful and enjoyable holiday,
+                    and we will do our best to minimize any inconvenience caused by the closure.</p>
+
+                    <p>Wishing you a Happy New Year and good health!</p>
+
+                    <p class="signature">Thank you.<br>KIRYONG TECH Team</p>
+                `
+            },
+            '6': {
+                badge: 'NEW',
+                title: 'Registered as Simwon Metal HMC Tier-1 Supplier',
+                date: '2020.10.15',
+                views: '245',
+                content: `
+                    <p>Hello, this is KIRYONG TECH.</p>
+
+                    <p>We are pleased to announce that we have been registered as a Hyundai Motor Company Tier-1 supplier through Simwon Metal Co., Ltd. in October 2020.</p>
+
+                    <div class="content-box">
+                        <h3>Registration Overview</h3>
+                        <ul>
+                            <li><strong>Partner Company:</strong> Simwon Metal Co., Ltd.</li>
+                            <li><strong>Registration Type:</strong> HMC (Hyundai Motor Company) Tier-1 Supplier</li>
+                            <li><strong>Registration Date:</strong> October 2020</li>
+                            <li><strong>Products:</strong> Automotive press dies</li>
+                        </ul>
+                    </div>
+
+                    <p>This registration further expands our Hyundai Motor Company partnership network,
+                    following Sungwoo Hitech, Ajin Industrial, and Dongwon Metal.</p>
+
+                    <div class="content-box">
+                        <h3>Hyundai/Kia Partner History</h3>
+                        <ul>
+                            <li>2006.01 - Registered as Sungwoo Hitech HMC Tier-1 Supplier</li>
+                            <li>2010.05 - Registered as Ajin Industrial HMC Tier-1 Supplier</li>
+                            <li>2015.05 - Registered as Dongwon Metal HMC Tier-1 Supplier</li>
+                            <li>2020.10 - Registered as Simwon Metal HMC Tier-1 Supplier</li>
+                        </ul>
+                    </div>
+
+                    <p>Since acquiring the HYUNDAI/KIA SQ quality certification in 2004,
+                    we have continuously been recognized for our capabilities as a Hyundai Motor Group partner.</p>
+
+                    <p>We will continue to do our best to repay our customers' trust through the supply of the highest quality products
+                    and contribute to the development of the automotive industry.</p>
+
+                    <p class="signature">Thank you.<br>KIRYONG TECH Team</p>
+                `
+            }
+        };
+
+        // Get parameter from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const noticeId = urlParams.get('id') || '5';
+
+        // Display notice
+        const notice = notices[noticeId];
+        if (notice) {
+            if (notice.badge) {
+                document.getElementById('noticeBadge').textContent = notice.badge;
+                document.getElementById('noticeBadge').style.display = 'inline-block';
+            } else {
+                document.getElementById('noticeBadge').style.display = 'none';
+            }
+            document.getElementById('noticeTitle').textContent = notice.title;
+            document.getElementById('noticeDate').textContent = notice.date;
+            document.getElementById('noticeViews').textContent = notice.views;
+            document.getElementById('noticeContent').innerHTML = notice.content;
+
+            // Set previous/next post
+            const prevId = String(Math.max(1, parseInt(noticeId) - 1));
+            const nextId = String(Math.min(6, parseInt(noticeId) + 1));
+
+            if (prevId !== noticeId && notices[prevId]) {
+                document.getElementById('prevNotice').href = `notice-detail.html?id=${prevId}`;
+                document.getElementById('prevTitle').textContent = notices[prevId].title;
+            } else {
+                document.getElementById('prevNotice').style.display = 'none';
+            }
+
+            if (nextId !== noticeId && notices[nextId]) {
+                document.getElementById('nextNotice').href = `notice-detail.html?id=${nextId}`;
+                document.getElementById('nextTitle').textContent = notices[nextId].title;
+            } else {
+                document.getElementById('nextNotice').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

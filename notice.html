@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기룡테크 - 공지사항</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">KIRYONG TECH</a></div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">메인</a></li>
+                <li class="has-dropdown">
+                    <a href="company-info.html">
+                        회사소개
+                        <span class="dropdown-arrow"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="company-info.html">회사소개</a></li>
+                        <li><a href="ceo-message.html">CEO 인사말</a></li>
+                        <li><a href="certifications.html">품질 인증 현황 및 수상</a></li>
+                        <li><a href="gallery.html">현장 사진</a></li>
+                    </ul>
+                </li>
+                <li><a href="facilities.html">시설장비보유현황</a></li>
+                <li><a href="location.html">오시는 길</a></li>
+                <li><a href="notice.html" class="active">공지사항</a></li>
+            </ul>
+            <a href="en/notice.html" class="lang-switch">
+                <svg class="flag-icon" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="60" height="40" fill="#fff"/>
+                    <rect y="0" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="6.15" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="12.31" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="18.46" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="24.62" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="30.77" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="36.92" width="60" height="3.08" fill="#B22234"/>
+                    <rect width="24" height="21.54" fill="#3C3B6E"/>
+                </svg>
+                EN
+            </a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-content">
+            <span class="header-label">NOTICE</span>
+            <h1>공지사항</h1>
+            <p>기룡테크의 새로운 소식을 전해드립니다</p>
+        </div>
+    </section>
+
+    <!-- Notice List -->
+    <section class="notice-list">
+        <div class="container">
+            <div class="notice-container">
+                <!-- Search Box -->
+                <div class="notice-search" data-aos="fade-down">
+                    <input type="text" placeholder="검색어를 입력하세요" id="searchInput">
+                    <button class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Notice Table -->
+                <div class="notice-table" data-aos="fade-up">
+                    <div class="notice-header">
+                        <div class="notice-col-num">번호</div>
+                        <div class="notice-col-title">제목</div>
+                        <div class="notice-col-date">등록일</div>
+                        <div class="notice-col-views">조회</div>
+                    </div>
+
+                    <!-- Notice Items -->
+                    <a href="notice-detail.html?id=6" class="notice-item">
+                        <div class="notice-col-num">
+                            <span class="notice-badge new">NEW</span>
+                        </div>
+                        <div class="notice-col-title">
+                            <span class="notice-title">㈜ 심원금속 HMC 1차 등록업체 등록 안내</span>
+                        </div>
+                        <div class="notice-col-date">2020.10.15</div>
+                        <div class="notice-col-views">245</div>
+                    </a>
+
+                    <a href="notice-detail.html?id=5" class="notice-item">
+                        <div class="notice-col-num">
+                            <span class="notice-badge important">중요</span>
+                        </div>
+                        <div class="notice-col-title">
+                            <span class="notice-title">2024년 설 연휴 휴무 안내</span>
+                        </div>
+                        <div class="notice-col-date">2024.01.20</div>
+                        <div class="notice-col-views">152</div>
+                    </a>
+
+                    <a href="notice-detail.html?id=4" class="notice-item">
+                        <div class="notice-col-num">4</div>
+                        <div class="notice-col-title">
+                            <span class="notice-title">회사 확장 이전 안내</span>
+                        </div>
+                        <div class="notice-col-date">2017.03.15</div>
+                        <div class="notice-col-views">389</div>
+                    </a>
+
+                    <a href="notice-detail.html?id=3" class="notice-item">
+                        <div class="notice-col-num">3</div>
+                        <div class="notice-col-title">
+                            <span class="notice-title">ISO 9001:2008 품질경영시스템 인증 취득</span>
+                        </div>
+                        <div class="notice-col-date">2009.06.20</div>
+                        <div class="notice-col-views">421</div>
+                    </a>
+
+                    <a href="notice-detail.html?id=2" class="notice-item">
+                        <div class="notice-col-num">2</div>
+                        <div class="notice-col-title">
+                            <span class="notice-title">사업자명 변경 안내</span>
+                        </div>
+                        <div class="notice-col-date">2002.02.10</div>
+                        <div class="notice-col-views">356</div>
+                    </a>
+
+                    <a href="notice-detail.html?id=1" class="notice-item">
+                        <div class="notice-col-num">1</div>
+                        <div class="notice-col-title">
+                            <span class="notice-title">홈페이지 리뉴얼 오픈</span>
+                        </div>
+                        <div class="notice-col-date">2024.12.15</div>
+                        <div class="notice-col-views">512</div>
+                    </a>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination" data-aos="fade-up">
+                    <button class="page-btn prev">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="page-num active">1</button>
+                    <button class="page-btn next">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KIRYONG TECH</h3>
+                    <p>자동차 프레스 금형 제조 전문기업</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">메인</a></li>
+                        <li><a href="company-info.html">회사소개</a></li>
+                        <li><a href="facilities.html">시설장비보유현황</a></li>
+                        <li><a href="location.html">오시는 길</a></li>
+                        <li><a href="notice.html">공지사항</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>TEL: 053-583-3244</p>
+                    <p>FAX: 053-583-3243</p>
+                    <p>EMAIL: warni12@naver.com</p>
+                    <p>대구광역시 달서구 호산동로 112 (호산동 357-76)</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KIRYONG TECH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

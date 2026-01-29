@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기룡테크</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">KIRYONG TECH</a></div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">메인</a></li>
+                <li class="has-dropdown">
+                    <a href="company-info.html">
+                        회사소개
+                        <span class="dropdown-arrow"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="company-info.html">회사소개</a></li>
+                        <li><a href="ceo-message.html">CEO 인사말</a></li>
+                        <li><a href="certifications.html">품질 인증 현황 및 수상</a></li>
+                        <li><a href="gallery.html">현장 사진</a></li>
+                    </ul>
+                </li>
+                <li><a href="facilities.html">시설장비보유현황</a></li>
+                <li><a href="location.html">오시는 길</a></li>
+                <li><a href="notice.html">공지사항</a></li>
+            </ul>
+            <a href="en/index.html" class="lang-switch">
+                <svg class="flag-icon" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="60" height="40" fill="#fff"/>
+                    <rect y="0" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="6.15" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="12.31" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="18.46" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="24.62" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="30.77" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="36.92" width="60" height="3.08" fill="#B22234"/>
+                    <rect width="24" height="21.54" fill="#3C3B6E"/>
+                </svg>
+                EN
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Slider Section -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <div class="slide-content">
+                    <div class="slide-overlay"></div>
+                    <img src="images/자동차부품.jpg" alt="Slide 1">
+                    <div class="slide-text">
+                        <h1 class="slide-title">프레스 금형 기술의 선두주자</h1>
+                        <p class="slide-subtitle">최첨단 설비와 숙련된 기술력으로 고품질 프레스 금형을 제작합니다</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <div class="slide-overlay"></div>
+                    <img src="images/자동차공정.jpg" alt="Slide 2">
+                    <div class="slide-text">
+                        <h1 class="slide-title">혁신적인 제조 솔루션</h1>
+                        <p class="slide-subtitle">다양한 산업 분야의 요구사항을 충족시키는 맞춤형 금형</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <div class="slide-overlay"></div>
+                    <img src="images/계약.jpg" alt="Slide 3">
+                    <div class="slide-text">
+                        <h1 class="slide-title">신뢰할 수 있는 파트너</h1>
+                        <p class="slide-subtitle">30년 이상의 경험과 노하우로 고객 만족을 실현합니다</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider Controls -->
+        <button class="slider-btn prev" id="prevBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <button class="slider-btn next" id="nextBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+        
+        <!-- Slider Indicators -->
+        <div class="slider-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+        </div>
+    </section>
+
+    <!-- Company Info Section -->
+    <section class="company-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card" data-aos="fade-up">
+                    <div class="info-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3>프레스 금형 제작</h3>
+                    <p>최신 CAD/CAM 시스템을 활용한</p>
+                    <p>프레스 금형 설계 및 제작</p>
+                </div>
+                <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="info-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h3>다양한 설비</h3>
+                    <p>300~1200톤급 대형 프레스 포함</p>
+                    <p>다양한 프레스 가공 장비 보유</p>
+                </div>
+                <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="info-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>전문 인력</h3>
+                    <p>30년 경력의 숙련된 기술진과 체계적인</p>
+                    <p>품질 관리</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="preview-content">
+                <div class="preview-text" data-aos="fade-right">
+                    <span class="section-label">ABOUT US</span>
+                    <h2>기룡테크를 소개합니다</h2>
+                    <p>
+                        <span class="sentence">기룡테크는 1994년 설립 이래 프레스 금형 제작 분야에서 꾸준히 성장해온 전문 기업입니다.</span>
+                        <span class="sentence">자동차 산업 분야에 고품질 프레스 금형을 공급하며, 고객 만족을 최우선으로 생각하는 기업 문화를 지향합니다.</span>
+                    </p>
+                    <a href="company-info.html" class="btn-primary">자세히 보기</a>
+                </div>
+                <div class="preview-image" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400&fit=crop" alt="회사 소개">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KIRYONG TECH</h3>
+                    <p>자동차 프레스 금형 제조 전문기업</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">메인</a></li>
+                        <li><a href="company-info.html">회사소개</a></li>
+                        <li><a href="facilities.html">시설장비보유현황</a></li>
+                        <li><a href="location.html">오시는 길</a></li>
+                        <li><a href="notice.html">공지사항</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>TEL: 053-583-3244</p>
+                    <p>FAX: 053-583-3243</p>
+                    <p>EMAIL: warni12@naver.com</p>
+                    <p>대구광역시 달서구 호산동로 112 (호산동 357-76)</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KIRYONG TECH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

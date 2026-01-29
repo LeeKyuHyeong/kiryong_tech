@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIRYONG TECH - Notice</title>
+    <link rel="icon" type="image/x-icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">KIRYONG TECH</a></div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="company-info.html">
+                        About
+                        <span class="dropdown-arrow"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="company-info.html">Company Info</a></li>
+                        <li><a href="ceo-message.html">CEO Message</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="notice.html" class="active">Notice</a></li>
+            </ul>
+            <a href="../notice.html" class="lang-switch">
+                <svg class="flag-icon" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="60" height="40" fill="#fff"/>
+                    <circle cx="30" cy="20" r="10" fill="#C60C30"/>
+                    <path d="M30 10 A10 10 0 0 1 30 30 A5 5 0 0 1 30 20 A5 5 0 0 0 30 10" fill="#003478"/>
+                    <g fill="#000">
+                        <rect x="8" y="6" width="2" height="10" transform="rotate(-56 9 11)"/>
+                        <rect x="11" y="4" width="2" height="10" transform="rotate(-56 12 9)"/>
+                        <rect x="14" y="2" width="2" height="10" transform="rotate(-56 15 7)"/>
+                        <rect x="44" y="28" width="2" height="10" transform="rotate(-56 45 33)"/>
+                        <rect x="47" y="26" width="2" height="10" transform="rotate(-56 48 31)"/>
+                        <rect x="50" y="24" width="2" height="10" transform="rotate(-56 51 29)"/>
+                        <rect x="44" y="2" width="2" height="10" transform="rotate(56 45 7)"/>
+                        <rect x="47" y="4" width="2" height="10" transform="rotate(56 48 9)"/>
+                        <rect x="50" y="6" width="2" height="10" transform="rotate(56 51 11)"/>
+                        <rect x="8" y="24" width="2" height="10" transform="rotate(56 9 29)"/>
+                        <rect x="11" y="26" width="2" height="10" transform="rotate(56 12 31)"/>
+                        <rect x="14" y="28" width="2" height="10" transform="rotate(56 15 33)"/>
+                    </g>
+                </svg>
+                KR
+            </a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-content">
+            <span class="header-label">NOTICE</span>
+            <h1>Notice</h1>
+            <p>Latest news from KIRYONG TECH</p>
+        </div>
+    </section>
+
+    <!-- Notice List -->
+    <section class="notice-list">
+        <div class="container">
+            <div class="notice-container">
+                <!-- Search Box -->
+                <div class="notice-search" data-aos="fade-down">
+                    <input type="text" placeholder="Search..." id="searchInput">
+                    <button class="search-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Notice Table -->
+                <div class="notice-table" data-aos="fade-up">
+                    <div class="notice-header">
+                        <div class="notice-col-num">No.</div>
+                        <div class="notice-col-title">Title</div>
+                        <div class="notice-col-date">Date</div>
+                        <div class="notice-col-views">Views</div>
+                    </div>
+
+                    <!-- Notice Items -->
+                    <a href="notice-detail.html?id=6" class="notice-item">
+                        <div class="notice-col-num">
+                            <span class="notice-badge new">NEW</span>
+                        </div>
+                        <div class="notice-col-title">
+                            <span class="notice-title">Registered as Simwon Metal HMC Tier-1 Supplier</span>
+                        </div>
+                        <div class="notice-col-date">2020.10.15</div>
+                        <div class="notice-col-views">245</div>
+                    </a>
+
+                    <a href="notice-detail.html?id=5" class="notice-item">
+                        <div class="notice-col-num">
+                            <span class="notice-badge important">IMP</span>
+                        </div>
+                        <div class="notice-col-title">
+                            <span class="notice-title">2024 Lunar New Year Holiday Notice</span>
+                        </div>
+                        <div class="notice-col-date">2024.01.20</div>
+                        <div class="notice-col-views">152</div>
+                    </a>
+
+                    <a href="notice-detail.html?id=4" class="notice-item">
+                        <div class="notice-col-num">4</div>
+                        <div class="notice-col-title">
+                            <span class="notice-title">Factory Expansion & Relocation Notice</span>
+                        </div>
+                        <div class="notice-col-date">2017.03.15</div>
+                        <div class="notice-col-views">389</div>
+                    </a>
+
+                    <a href="notice-detail.html?id=3" class="notice-item">
+                        <div class="notice-col-num">3</div>
+                        <div class="notice-col-title">
+                            <span class="notice-title">ISO 9001:2008 Quality Management System Certification</span>
+                        </div>
+                        <div class="notice-col-date">2009.06.20</div>
+                        <div class="notice-col-views">421</div>
+                    </a>
+
+                    <a href="notice-detail.html?id=2" class="notice-item">
+                        <div class="notice-col-num">2</div>
+                        <div class="notice-col-title">
+                            <span class="notice-title">Company Name Change Notice</span>
+                        </div>
+                        <div class="notice-col-date">2002.02.10</div>
+                        <div class="notice-col-views">356</div>
+                    </a>
+
+                    <a href="notice-detail.html?id=1" class="notice-item">
+                        <div class="notice-col-num">1</div>
+                        <div class="notice-col-title">
+                            <span class="notice-title">Website Renewal Open</span>
+                        </div>
+                        <div class="notice-col-date">2024.12.15</div>
+                        <div class="notice-col-views">512</div>
+                    </a>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination" data-aos="fade-up">
+                    <button class="page-btn prev">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="page-num active">1</button>
+                    <button class="page-btn next">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KIRYONG TECH</h3>
+                    <p>Automotive Stamping Tools Manufacturer</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="company-info.html">About</a></li>
+                        <li><a href="facilities.html">Facilities</a></li>
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="notice.html">Notice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>TEL: +82-53-583-3244</p>
+                    <p>FAX: +82-53-583-3243</p>
+                    <p>EMAIL: warni12@naver.com</p>
+                    <p>112, Hosandong-ro, Dalseo-gu, Daegu, Korea</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KIRYONG TECH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

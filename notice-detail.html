@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기룡테크 - 공지사항 상세</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">KIRYONG TECH</a></div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">메인</a></li>
+                <li class="has-dropdown">
+                    <a href="company-info.html">
+                        회사소개
+                        <span class="dropdown-arrow"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="company-info.html">회사소개</a></li>
+                        <li><a href="ceo-message.html">CEO 인사말</a></li>
+                        <li><a href="certifications.html">품질 인증 현황 및 수상</a></li>
+                        <li><a href="gallery.html">현장 사진</a></li>
+                    </ul>
+                </li>
+                <li><a href="facilities.html">시설장비보유현황</a></li>
+                <li><a href="location.html">오시는 길</a></li>
+                <li><a href="notice.html" class="active">공지사항</a></li>
+            </ul>
+            <a href="en/notice-detail.html" class="lang-switch">
+                <svg class="flag-icon" viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="60" height="40" fill="#fff"/>
+                    <rect y="0" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="6.15" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="12.31" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="18.46" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="24.62" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="30.77" width="60" height="3.08" fill="#B22234"/>
+                    <rect y="36.92" width="60" height="3.08" fill="#B22234"/>
+                    <rect width="24" height="21.54" fill="#3C3B6E"/>
+                </svg>
+                EN
+            </a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-content">
+            <span class="header-label">NOTICE</span>
+            <h1>공지사항</h1>
+            <p>기룡테크의 새로운 소식을 전해드립니다</p>
+        </div>
+    </section>
+
+    <!-- Notice Detail -->
+    <section class="notice-detail">
+        <div class="container">
+            <div class="detail-container" data-aos="fade-up">
+                <!-- Detail Header -->
+                <div class="detail-header">
+                    <div class="detail-title-wrap">
+                        <span class="detail-badge" id="noticeBadge"></span>
+                        <h2 class="detail-title" id="noticeTitle"></h2>
+                    </div>
+                    <div class="detail-meta">
+                        <span class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <span id="noticeDate"></span>
+                        </span>
+                        <span class="meta-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            조회수 <span id="noticeViews"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Detail Content -->
+                <div class="detail-content" id="noticeContent">
+                    <!-- 동적으로 내용이 표시됩니다 -->
+                </div>
+
+                <!-- Detail Navigation -->
+                <div class="detail-nav">
+                    <a href="#" class="detail-nav-item prev" id="prevNotice">
+                        <span class="nav-label">이전 글</span>
+                        <span class="nav-title" id="prevTitle"></span>
+                    </a>
+                    <a href="#" class="detail-nav-item next" id="nextNotice">
+                        <span class="nav-label">다음 글</span>
+                        <span class="nav-title" id="nextTitle"></span>
+                    </a>
+                </div>
+
+                <!-- Back to List Button -->
+                <div class="detail-actions">
+                    <a href="notice.html" class="btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>
+                            <polyline points="12 19 5 12 12 5"></polyline>
+                        </svg>
+                        목록으로
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KIRYONG TECH</h3>
+                    <p>자동차 프레스 금형 제조 전문기업</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">메인</a></li>
+                        <li><a href="company-info.html">회사소개</a></li>
+                        <li><a href="facilities.html">시설장비보유현황</a></li>
+                        <li><a href="location.html">오시는 길</a></li>
+                        <li><a href="notice.html">공지사항</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>TEL: 053-583-3244</p>
+                    <p>FAX: 053-583-3243</p>
+                    <p>EMAIL: warni12@naver.com</p>
+                    <p>대구광역시 달서구 호산동로 112 (호산동 357-76)</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KIRYONG TECH. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // 공지사항 데이터
+        const notices = {
+            '1': {
+                badge: '',
+                title: '홈페이지 리뉴얼 오픈',
+                date: '2024.12.15',
+                views: '512',
+                content: `
+                    <p>안녕하십니까? 기룡테크입니다.</p>
+                    
+                    <p>고객 여러분께 더 나은 서비스를 제공하고자 홈페이지를 전면 리뉴얼하였습니다.</p>
+
+                    <div class="content-box">
+                        <h3>주요 개선 사항</h3>
+                        <ul>
+                            <li><strong>반응형 디자인 적용</strong> - PC, 태블릿, 모바일 등 모든 기기에서 최적화된 화면 제공</li>
+                            <li><strong>회사 정보 업데이트</strong> - 최신 연혁 및 보유 설비 현황 반영</li>
+                            <li><strong>사용자 경험 개선</strong> - 직관적인 메뉴 구성과 빠른 페이지 로딩</li>
+                            <li><strong>공지사항 시스템</strong> - 실시간 회사 소식 및 공지사항 확인</li>
+                        </ul>
+                    </div>
+
+                    <p>앞으로도 기룡테크는 고객 여러분의 성공적인 비즈니스 파트너가 되기 위해 최선을 다하겠습니다.</p>
+
+                    <p class="signature">감사합니다.<br>(주)기룡테크 임직원 일동</p>
+                `
+            },
+            '2': {
+                badge: '',
+                title: '사업자명 변경 안내',
+                date: '2002.02.10',
+                views: '356',
+                content: `
+                    <p>안녕하십니까? 기룡정밀금속입니다.</p>
+                    
+                    <p>당사는 2002년 2월부로 사업자명을 변경하게 되었음을 알려드립니다.</p>
+
+                    <div class="content-box">
+                        <h3>변경 내용</h3>
+                        <ul>
+                            <li><strong>변경 전:</strong> 기룡정밀금속</li>
+                            <li><strong>변경 후:</strong> 기룡정밀</li>
+                            <li><strong>변경일:</strong> 2002년 2월 10일</li>
+                        </ul>
+                    </div>
+
+                    <p>사업자명 변경에 따른 사업자등록번호, 주소, 연락처 등은 기존과 동일하며, 
+                    모든 계약 관계 및 거래 조건 또한 변동 없이 유지됩니다.</p>
+
+                    <p>변경된 사업자명으로 세금계산서 등 각종 서류가 발행되오니 참고하여 주시기 바랍니다.</p>
+
+                    <p>앞으로도 변함없는 관심과 성원을 부탁드리며, 최고의 품질로 보답하겠습니다.</p>
+
+                    <p class="signature">감사합니다.<br>기룡정밀 임직원 일동</p>
+                `
+            },
+            '3': {
+                badge: '',
+                title: 'ISO 9001:2008 품질경영시스템 인증 취득',
+                date: '2009.06.20',
+                views: '421',
+                content: `
+                    <p>안녕하십니까? 기룡정밀입니다.</p>
+                    
+                    <p>당사는 2009년 6월 ISO 9001:2008 품질경영시스템 국제 표준 인증을 취득하였습니다.</p>
+
+                    <div class="content-box">
+                        <h3>인증 개요</h3>
+                        <ul>
+                            <li><strong>인증명:</strong> ISO 9001:2008</li>
+                            <li><strong>인증 범위:</strong> 자동차 프레스 금형 제작</li>
+                            <li><strong>인증일:</strong> 2009년 6월</li>
+                            <li><strong>인증 기관:</strong> German Cert</li>
+                        </ul>
+                    </div>
+
+                    <p>ISO 9001은 품질경영시스템에 대한 국제 표준으로, 고객 만족과 지속적인 개선을 
+                    통한 품질 보증 체계를 갖추었음을 의미합니다.</p>
+
+                    <div class="content-box">
+                        <h3>향후 계획</h3>
+                        <ul>
+                            <li>체계적인 품질관리 시스템 운영</li>
+                            <li>지속적인 공정 개선 활동</li>
+                            <li>고객 만족도 향상을 위한 노력 강화</li>
+                            <li>정기적인 내부 심사 및 교육 실시</li>
+                        </ul>
+                    </div>
+
+                    <p>이번 ISO 인증 취득을 통해 더욱 체계적이고 안정적인 품질 관리를 실현하여 
+                    고객 여러분께 최상의 제품과 서비스를 제공하도록 하겠습니다.</p>
+
+                    <p class="signature">감사합니다.<br>기룡정밀 임직원 일동</p>
+                `
+            },
+            '4': {
+                badge: '',
+                title: '회사 확장 이전 안내',
+                date: '2017.03.15',
+                views: '389',
+                content: `
+                    <p>안녕하십니까? 기룡정밀입니다.</p>
+                    
+                    <p>당사는 사업 확장에 따라 2017년 3월 새로운 공장으로 이전하게 되었음을 알려드립니다.</p>
+
+                    <div class="content-box">
+                        <h3>이전 정보</h3>
+                        <ul>
+                            <li><strong>이전 전 주소:</strong> 대구광역시 달서구 월암동</li>
+                            <li><strong>이전 후 주소:</strong> 대구광역시 달서구 호산동로 112 (호산동 357-76)</li>
+                            <li><strong>이전일:</strong> 2017년 3월 15일</li>
+                            <li><strong>정상 업무 개시:</strong> 2017년 3월 20일</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-box">
+                        <h3>연락처 정보</h3>
+                        <ul>
+                            <li><strong>전화:</strong> 053-583-3244 (변동 없음)</li>
+                            <li><strong>팩스:</strong> 053-583-3243 (변동 없음)</li>
+                            <li><strong>이메일:</strong> warni12@naver.com (변동 없음)</li>
+                        </ul>
+                    </div>
+
+                    <p>새로운 공장은 기존 대비 약 2배 규모로 확장되었으며, 최신 설비를 갖추어 
+                    생산 능력과 품질을 한층 더 향상시킬 수 있게 되었습니다.</p>
+
+                    <p>이전 기간 중 일시적인 업무 공백이 발생할 수 있으나, 최소화할 수 있도록 
+                    최선을 다하겠습니다. 양해 부탁드립니다.</p>
+
+                    <p>앞으로도 변함없는 관심과 성원 부탁드리며, 더욱 발전하는 기룡정밀이 되겠습니다.</p>
+
+                    <p class="signature">감사합니다.<br>기룡정밀 임직원 일동</p>
+                `
+            },
+            '5': {
+                badge: '중요',
+                title: '2024년 설 연휴 휴무 안내',
+                date: '2024.01.20',
+                views: '152',
+                content: `
+                    <p>안녕하십니까? 기룡테크입니다.</p>
+                    
+                    <p>2024년 설 연휴 기간 휴무 일정을 안내 드립니다.</p>
+
+                    <div class="content-box">
+                        <h3>휴무 기간</h3>
+                        <ul>
+                            <li><strong>2024년 2월 9일(금) ~ 2월 12일(월)</strong></li>
+                            <li>이 4일간 휴무</li>
+                            <li>2024년 2월 13일(화)부터 정상 영업</li>
+                        </ul>
+                    </div>
+
+                    <p>휴무 기간 중 긴급 연락이 필요하신 경우, 아래 비상 연락망을 이용해 주시기 바랍니다.</p>
+
+                    <div class="content-box">
+                        <h3>비상 연락망</h3>
+                        <ul>
+                            <li>생산부: 010-1234-5678</li>
+                            <li>영업부: 010-2345-6789</li>
+                            <li>관리부: 010-3456-7890</li>
+                        </ul>
+                    </div>
+
+                    <p>설 연휴 기간 동안 고객님들께서는 평안하고 즐거운 시간 보내시길 바라며, 
+                    휴무로 인한 불편을 최소화할 수 있도록 최선을 다하겠습니다.</p>
+
+                    <p>새해 복 많이 받으시고, 항상 건강하시길 바랍니다.</p>
+
+                    <p class="signature">감사합니다.<br>(주)기룡테크 임직원 일동</p>
+                `
+            },
+            '6': {
+                badge: 'NEW',
+                title: '㈜ 심원금속 HMC 1차 등록업체 등록 안내',
+                date: '2020.10.15',
+                views: '245',
+                content: `
+                    <p>안녕하십니까? 기룡테크입니다.</p>
+                    
+                    <p>당사는 2020년 10월 ㈜ 심원금속의 현대자동차 1차 협력업체로 등록되었음을 알려드립니다.</p>
+
+                    <div class="content-box">
+                        <h3>등록 개요</h3>
+                        <ul>
+                            <li><strong>등록 업체:</strong> ㈜ 심원금속</li>
+                            <li><strong>등록 구분:</strong> HMC (Hyundai Motor Company) 1차 협력업체</li>
+                            <li><strong>등록일:</strong> 2020년 10월</li>
+                            <li><strong>공급 품목:</strong> 자동차 프레스 금형</li>
+                        </ul>
+                    </div>
+
+                    <p>이번 등록을 통해 기존의 ㈜ 성우하이텍, ㈜ 아진산업, ㈜ 동원금속에 이어 
+                    현대자동차 협력업체 네트워크를 더욱 확대하게 되었습니다.</p>
+
+                    <div class="content-box">
+                        <h3>현대/기아차 협력업체 현황</h3>
+                        <ul>
+                            <li>2006.01 - ㈜ 성우하이텍 HMC 1차등록업체 등록</li>
+                            <li>2010.05 - ㈜ 아진산업 HMC 1차등록업체 등록</li>
+                            <li>2015.05 - ㈜ 동원금속 HMC 1차등록업체 등록</li>
+                            <li>2020.10 - ㈜ 심원금속 HMC 1차등록업체 등록</li>
+                        </ul>
+                    </div>
+
+                    <p>당사는 2004년 HYUNDAI/KIA SQ 품질 자격을 취득한 이래 지속적으로 
+                    현대자동차그룹 협력업체로서의 역량을 인정받아왔습니다.</p>
+
+                    <p>앞으로도 최고 품질의 제품 공급을 통해 고객사의 신뢰에 보답하고, 
+                    자동차 산업 발전에 기여할 수 있도록 최선을 다하겠습니다.</p>
+
+                    <p class="signature">감사합니다.<br>(주)기룡테크 임직원 일동</p>
+                `
+            }
+        };
+
+        // URL에서 파라미터 가져오기
+        const urlParams = new URLSearchParams(window.location.search);
+        const noticeId = urlParams.get('id') || '5'; // 기본값은 5번 (설 연휴)
+
+        // 공지사항 표시
+        const notice = notices[noticeId];
+        if (notice) {
+            if (notice.badge) {
+                document.getElementById('noticeBadge').textContent = notice.badge;
+                document.getElementById('noticeBadge').style.display = 'inline-block';
+            } else {
+                document.getElementById('noticeBadge').style.display = 'none';
+            }
+            document.getElementById('noticeTitle').textContent = notice.title;
+            document.getElementById('noticeDate').textContent = notice.date;
+            document.getElementById('noticeViews').textContent = notice.views;
+            document.getElementById('noticeContent').innerHTML = notice.content;
+
+            // 이전/다음 글 설정
+            const prevId = String(Math.max(1, parseInt(noticeId) - 1));
+            const nextId = String(Math.min(6, parseInt(noticeId) + 1));
+
+            if (prevId !== noticeId && notices[prevId]) {
+                document.getElementById('prevNotice').href = `notice-detail.html?id=${prevId}`;
+                document.getElementById('prevTitle').textContent = notices[prevId].title;
+            } else {
+                document.getElementById('prevNotice').style.display = 'none';
+            }
+
+            if (nextId !== noticeId && notices[nextId]) {
+                document.getElementById('nextNotice').href = `notice-detail.html?id=${nextId}`;
+                document.getElementById('nextTitle').textContent = notices[nextId].title;
+            } else {
+                document.getElementById('nextNotice').style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
